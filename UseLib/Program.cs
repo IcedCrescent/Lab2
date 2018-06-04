@@ -14,15 +14,27 @@ namespace UseLib
         {
             officeStaffList = new List<OfficeStaff>();
             managerList = new List<Manager>();
-            InputOfficeStaff(3);
-            InputManager(3);
+            InputOfficeStaff(1);
+            InputManager(1);
             foreach (OfficeStaff os in officeStaffList)
             {
                 os.ShowInfo();
+                Console.Write("Input allowance: ");
+                int allowance = int.Parse(Console.ReadLine());
+                if (allowance != 0)
+                {
+                    Console.WriteLine("Calculated salary with allowance ({0}): {1}", allowance, os.CalculateSalary(allowance));
+                }
             }
             foreach (Manager manager in managerList)
             {
                 manager.ShowInfo();
+                Console.Write("Input allowance: ");
+                int allowance = int.Parse(Console.ReadLine());
+                if (allowance != 0)
+                {
+                    Console.WriteLine("Calculated salary with allowance ({0}): {1}", allowance, manager.CalculateSalary(allowance));
+                }
             }
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();

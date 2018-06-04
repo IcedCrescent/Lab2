@@ -29,12 +29,12 @@ namespace MyLib
 
         public virtual double CalculateSalary()
         {
-            return RateSalary * BasicSalary;
+            return (double)RateSalary * BasicSalary;
         }
 
         public virtual double CalculateSalary(int allowance)
         {
-            return RateSalary * BasicSalary + Math.Pow(RateSalary * BasicSalary, 2) / 100;
+            return RateSalary * BasicSalary + (double)(RateSalary * BasicSalary * allowance) / 100;
         }
         public void ShowInfo()
         {

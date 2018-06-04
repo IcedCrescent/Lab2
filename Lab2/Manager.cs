@@ -23,7 +23,7 @@ namespace MyLib
 
         public override double CalculateSalary()
         {
-            return base.CalculateSalary() - (double) NumberBusinessDay * MoneyIncreased;
+            return base.CalculateSalary() + (double) NumberBusinessDay * MoneyIncreased;
         }
 
         public override double CalculateSalary(int allowance)
