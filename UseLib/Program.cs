@@ -14,8 +14,8 @@ namespace UseLib
         {
             officeStaffList = new List<OfficeStaff>();
             managerList = new List<Manager>();
-            InputOfficeStaff(2);
-            InputManager(2);
+            InputOfficeStaff(3);
+            InputManager(3);
             foreach (OfficeStaff os in officeStaffList)
             {
                 os.ShowInfo();
